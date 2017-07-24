@@ -1,2 +1,10 @@
-Your Outstanding balance is: XXXXX
-Items purchased
+<% if(@user.is_admin?) %>
+  <%= link_to new_user_expense_path(@user) do %>
+    <button> Add expenses! </button>
+  <% end %>
+<% else %>
+  <div>
+    Your Outstanding balance is: XXXXX
+    Items purchased
+  </div>
+<% end %>

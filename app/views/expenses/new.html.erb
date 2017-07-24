@@ -1,0 +1,27 @@
+<h2>Add Expenses</h2>
+
+<%= form_for(:expenses, url: user_expenses_path(@user)) do |f| %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_id %><br />
+    <%= f.text_field :student_id, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Add Expense to User with id #{@user.id}" %>
+  </div>
+<% end %>
+
+

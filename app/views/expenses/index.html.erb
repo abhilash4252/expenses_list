@@ -1,0 +1,19 @@
+<div>
+  <h3>Total Expenses amount due: <%= @total_amount %> </h3>
+</div>
+<table>
+  <thead>
+    <tr>
+      <td>Description</td>
+      <td>Amount</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.expenses.each do |expense|%>
+      <tr>
+        <td><%= expense.description %></td>
+        <td><%= expense.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
